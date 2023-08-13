@@ -1,0 +1,173 @@
+html, body {
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #E4E5E7;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  font-size: 24px;
+  font-family: 'Open Sans';
+  font-style: italic;
+}
+
+.container{
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.todo-title{
+  text-align: center;
+  font-size: 100px;
+  color: rgba(175, 47, 47, 0.15);
+  font-family: 'Open Sans';
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.input-box{
+  width: 600px;
+  position: relative;
+}
+
+
+.doneMore-btn{
+  font-size: 30px;
+  font-weight: 400;
+  transform: rotate(90deg);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  opacity: 0.3;
+}
+
+.doneMore-btn:hover{
+  opacity: 1;
+  color: #000;
+}
+
+
+.taskInput{
+  width: 100%;
+  padding: 20px;
+  padding-left: 60px;
+  color: #000;
+  font-size: 24px;
+  border: 0;
+  box-shadow: 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  outline: 0;
+  outline-offset: 0;
+}
+
+.taskInput::placeholder{
+  font-size: 24px;
+  font-family: 'Open Sans';
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.tasksList{
+  max-width: 600px;
+  width: 100%;
+}
+
+
+.task-title{
+  transition: all 0.3s;
+  margin-left: 15px;
+}
+
+.task-title--done {
+  text-decoration: line-through;
+  color: #CDCDCD;
+}
+
+
+.list-group-item{
+  position: relative;
+  background: #fff;
+  width: 100%;
+  border: 1px solid #00000025;
+  padding: 20px;
+  padding-left: 60px;
+  box-shadow: 0 -1px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.btn-action{
+  background: transparent;
+  border: none;
+  font-size: 30px;
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.btn-action:first-child::after{
+  content: "";
+  width: 40px;
+  height: 40px;
+  border: 1px solid;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+
+.btn-action:first-child::before{ 
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/completed.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin:auto;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+
+.btn-action:first-child.active::before{
+  opacity: 1;
+}
+
+
+button:first-child{
+  position: absolute;
+  left: 10px;
+  transition: all 0.3s;
+}
+
+
+
+button:first-child:hover{
+  opacity: 0.5;
+}
+
+
+button:last-child{
+  position: absolute;
+  right: 10px;
+  color: rgba(156, 21, 21, 0.37);
+  transition: all 0.3s;
+}
+
+button:last-child:hover{
+  color: rgb(204, 19, 19);
+}
